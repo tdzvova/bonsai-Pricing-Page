@@ -1,0 +1,274 @@
+/*Starting with base styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body {
+    height: 1200px;
+    flex-wrap: wrap;  
+}
+
+/*Styling the header content*/
+.header {
+    display: flex;
+    width: 100%;   
+    background-color: #f0f8ff;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+    width: 100%;
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    
+    
+}
+.ham-item {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+}
+.ham-item li {
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    list-style: none;
+    color: #fff;
+    
+}
+.ham-item a {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+
+}
+.ham-item a :hover {
+    background-color: #00b289;
+}
+.ham-item label, #hamburger {
+    display: none;
+}
+
+  /*Small screens*/
+  @media (max-width: 48rem) {
+      .ham-item a {
+          box-sizing: border-box;
+          display: block;
+          width: 100%;
+          border-top: 1px solid #333;
+      }
+      /*Show ham menu*/
+.nav-menu label {
+    display: inline-block;
+    color: #fff;
+    background-color: #00b289;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 1rem;
+}
+/*Togle show/hide menu*/
+.ham-item {
+    display: none;
+}
+.ham-item input :checked~.ham-item {
+    display: block;
+}
+}     
+/*Styling the main content*/
+.main-content {
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+    
+}
+.workflow {
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+    background-color: #fff;
+}
+.workflow h2 {
+    font-size: 1.5rem;
+    padding: 1.2rem 1rem;
+}
+.workflow p {
+    font-size: 1.7rem;
+    font-weight: 800;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 1rem;
+    text-decoration: underline;
+}
+.workflow ul {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    padding: 1.2rem 1rem;
+    margin-left: 1rem;
+}
+.workflow li {
+    list-style: circle;
+    border-bottom: 1px solid #fff;
+    padding: 1.rem;
+    margin: 1rem;
+    
+}
+.workflow li :last-of-type {
+    border-bottom: none;
+}
+    
+button {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1.2rem;
+    background-color: #20b2aa;
+
+}
+/*Styling the add-ons section*/
+.add-ons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+.add-ons-items {
+    display: block;
+    justify-content: center;
+    
+    padding: 1rem;
+    margin: 1.2rem;
+    background-color: #f5f5f5;
+    width: 100%;
+    
+}
+.add-ons-items p {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+.own-it {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 1rem;
+    margin: 1.2rem;
+    background-color: #f0f8ff;
+    height: 100px;
+    width: 100%;
+    
+}
+.own-it button {
+    width: 50%;
+}
+/*Styling the accordion section*/
+.accordion {
+    display: flex;
+    justify-content: flex-start;
+    
+
+}
+.FAQs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.FAQs summary {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 1.2rem;
+    
+}
+.FAQs li{
+    padding-top: 1rem;
+    margin: 1.2rem;
+    list-style: none;
+    font-size: 1,2rem;
+    font-weight: 400;
+    
+}
+/*Styling Footer Section*/
+.container {
+    flex: 1;
+}
+footer {
+    background-color: #f5f5f5;
+    color: #000;
+    line-height: 1.5;
+}
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+footer p {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+}
+a :hover {
+    text-decoration: underline;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+.main-futa  {
+    padding: 1.25rem 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+@media only screen and (max-width:25rem/*400px*/) {
+    .main-futa {
+        justify-content: flex-start;
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .futa-item {
+    padding: 1.25rem;
+    min-width: 12.5rem;
+    }
+    .workflow {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        flex-direction: column;
+    }
+        
+}
+
+@media only screen and (min-width: 25.0625rem) {
+    .main-futa {
+        justify-content: space-around;
+        flex-direction: row;
+        width: 100%;
+    }
+    .main-content {
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: row;
+        }
+    
+}
+@media only screen and (min-width: 77.5rem /*1240px*/) {
+    .main-futa {
+        justify-content: space-between;
+        width: 77.5rem;
+        
+    }
+}
+.futa-item {
+    padding: 1.25rem;
+    min-width: 12.5rem;
+}
